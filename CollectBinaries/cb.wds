@@ -1,0 +1,17 @@
+.if(${/d:$arg1})
+{
+	.foreach ( var { lm v } ) 
+	{ 
+		.if ( $spat ( "${var}", "?:\*\.[de][lx][el]" ) )
+		{
+			.echo Processing var
+			.shell -x copy var $arg1
+
+		} 		
+	}
+}
+.else
+{
+	.echo Provide one parameter - full file path for directory where colected binaries will be stored.
+}
+

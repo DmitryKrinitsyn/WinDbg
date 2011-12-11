@@ -1,0 +1,1 @@
+This windbg script collects all binaries  (dll and exe) that are currently loaded by process.
