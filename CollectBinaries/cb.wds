@@ -2,12 +2,11 @@
 {
 	.foreach ( var { lm v } ) 
 	{ 
-		.if ( $spat ( "${var}", "?:\*\.[de][lx][el]" ) )
+		.if ( $spat ( "${var}", "?:\*\.[dDeE][lLxX][EelL]" ) )
 		{
 			.echo Processing var
 			.shell -x copy var $arg1
-
-		} 		
+		}
 	}
 }
 .else
